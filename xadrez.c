@@ -7,7 +7,8 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-        int bispo, torre, rainha;
+        int bispo, torre, rainha, cavalo;
+        int movimento;
 
     //Interação usuário-máquina
     //Sugestão: No vídeo o professor pede para "brincarmos" e tentarmos fazer de forma diferente, estarei tentando, k.
@@ -45,6 +46,25 @@ int main() {
 
             } while (rainha < 1 || rainha > 8);
 
+        do {
+            printf("Insira a direção que você deseja que a peça (CAVALO) poderá mover-se no tabuleiro:\n");
+            printf("(1) - Cima, cima, direita\n");
+            printf("(2) - Cima, cima, baixo\n");
+            printf("(3) - Baixo, baixo, direita\n");
+            printf("(4) - Baixo, baixo, esquerda\n");
+            printf("(5) - Direita, direita, cima\n");
+            printf("(6) - Direita, direita, baixo\n");
+            printf("(7) - Esquerda, esquerda, cima\n");
+            printf("(8) - Esquerda, esquerda, baixo\n");
+            scanf("%d", &cavalo);
+
+                if (cavalo <1 || cavalo > 8){
+                    printf("Selecione uma opção válida!\n");
+                }
+
+            } while (cavalo < 1 || cavalo > 8);
+        
+
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     
@@ -73,6 +93,68 @@ int main() {
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+
+        movimento = 1;
+        while (movimento--){
+            switch (cavalo){
+            case 1:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Cima\n");
+                }
+                printf("Direita.\n");
+                break;
+            case 2:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Cima\n");
+                }
+                printf("Baixo.\n");
+                break;
+            case 3:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Baixo\n");
+                }
+                printf("Direita.\n");
+                break;
+            case 4:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Baixo\n");
+                }
+                printf("Esquerda.\n");
+                break;
+            case 5:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Direita\n");
+                }
+                printf("Cima.\n");
+                break;
+            case 6:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Direta\n");
+                }
+                printf("Baixo.\n");
+                break;
+            case 7:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Esquerda\n");
+                }
+                printf("Cima.\n");
+                break;
+            case 8:
+                printf("CAVALO:\n");
+                for (int i = 0; i < 2; i++) {
+                    printf("Esquerda\n");
+                }
+                printf("Baixo.\n");
+                break;
+            }
+        }
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
